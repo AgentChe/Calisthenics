@@ -26,6 +26,7 @@ final class SplashViewModel {
     private lazy var contentManager = ContentManager()
     private lazy var workoutManager = WorkoutManager()
     private lazy var drillManager = DrillManager()
+    private lazy var paygateManager = PaygateManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -102,6 +103,9 @@ private extension SplashViewModel {
     
     func library() -> Observable<Void> {
         func source() -> Single<Void> {
+            let paygate = paygateManager
+                .obtainPaygate(forceUpdate: true)
+                .mapToVoid()
             let drillCategories = drillManager
                 .obtainDrillCategories(forceUpdate: true)
                 .mapToVoid()
@@ -123,6 +127,7 @@ private extension SplashViewModel {
             
             return Single
                 .zip([
+                    paygate,
                     drillCategories,
                     profile,
                     levels,
