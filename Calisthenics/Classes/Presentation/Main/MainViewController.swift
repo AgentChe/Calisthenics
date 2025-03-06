@@ -15,6 +15,8 @@ final class MainViewController: UIViewController {
     
     private lazy var coordinator = MainViewCoordinator(parentVC: self)
     
+    private lazy var requestATT = RequestATT()
+    
     private let requestReview: Bool
     
     private init(requestReview: Bool) {
@@ -43,6 +45,7 @@ final class MainViewController: UIViewController {
         
         requestReviewIfNeeded()
         addActionsToTabs()
+        requestATT.requestTrackingAuthorization()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
