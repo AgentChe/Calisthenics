@@ -8,20 +8,18 @@
 import Foundation
 
 final class GlobalDefinitions {
-    static let domain = "https://calisthenics.cocorporateapps.com"
+    static let domain = "https://calisthenics.thinkaboutapps.com"
     static let apiKey = "hZJtjfDEKQzzAaQ8oMYg"
     
     static let otterScaleHost = "https://api.korrekted.com"
     static let otterScaleApiKey = "lLF8kK6FegqVvL4W"
     
-    static let appleAppID = "6479897865"
-    
     static let applicationTag = "CALISTHENICS"
     static let amplitudeApiKey = "ad1acf62a1718340f0958c15b7b9dcfc"
     
-    static let termsOfServiceUrl = URL(string: "https://cocorporateapps.com/terms-of-use.html")!
-    static let privacyPolicyUrl = URL(string: "https://cocorporateapps.com/privacy-policy.html")!
-    static let contactUsUrl = URL(string: "https://cocorporateapps.com/contacts.html")!
+    static let termsOfServiceUrl = URL(string: "https://thinkaboutapps.com/terms")!
+    static let privacyPolicyUrl = URL(string: "https://thinkaboutapps.com/policy")!
+    static let contactUsUrl = URL(string: "https://thinkaboutapps.com/contact")!
     
     enum Paygate {
         static let defaultLifetime = "train.calisthenics.endless"
